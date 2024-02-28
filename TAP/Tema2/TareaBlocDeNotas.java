@@ -17,7 +17,7 @@ public class TareaBlocDeNotas extends JFrame implements ActionListener{
     }
     
     public TareaBlocDeNotas(){
-        setTitle("File to JTextField Example");
+        setTitle("Tarea");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         getContentPane();
         setSize(400, 300);
