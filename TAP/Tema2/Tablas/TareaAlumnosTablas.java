@@ -35,6 +35,7 @@ public class TareaAlumnosTablas extends JFrame implements TableModelListener, Ac
         modelo = new DefaultTableModel(datos, columnas);
         alumnos = new JTable(modelo);
         scroll = new JScrollPane(alumnos);
+        alumnos.setDefaultEditor(Object.class, null);
         
         panel = new JPanel();
         panel2 = new JPanel();
