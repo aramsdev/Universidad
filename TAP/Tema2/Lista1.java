@@ -1,0 +1,61 @@
+package Listas;
+
+
+import java.awt.GridLayout;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
+import javax.swing.DefaultListModel;
+import javax.swing.JFrame;
+import javax.swing.JList;
+import javax.swing.JOptionPane;
+import javax.swing.JScrollPane;
+import javax.swing.event.ListSelectionEvent;
+
+public class Lista1 extends JFrame implements ItemListener{
+    // Referencias
+    JList lista;
+    JList list;
+    JScrollPane pane;
+    
+    public Lista1(){
+        super("Ejemplo de JList");
+        setLayout(new GridLayout(2,1));
+        list = new JList();
+        pane = new JScrollPane(list);
+        String elementos[]= {"uno", "dos", "tres"};
+        lista = new JList(elementos);
+        DefaultListModel model = new DefaultListModel();
+        model.addElement("Opcion 1");
+        model.addElement("Opcion 2");
+        model.addElement("Opcion 3");
+        list.setModel(model);
+        getContentPane().add(pane);
+        getContentPane().add(lista);
+        list.addItemListener(this);
+        lista.addItemListener(this);
+        pack();
+        setLocationRelativeTo(null);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setVisible(true);
+    }
+    
+    public static void main(String[] args) {
+        new Lista1();
+    }
+    
+    @Override
+    public void valueChanged(ListSelectionEvent e){
+        if(e.getSource() == list){
+            JOptionPane.showMessageDialog(this, "La opcion seleccionada es " + list.getSelectedValue());
+        } else {
+            JOptionPane.showMessageDialog(this, "La opcion seleccionada es: " + lista.getSelectedValue());
+        }
+    }
+
+    @Override
+    public void itemStateChanged(ItemEvent ie) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+    
+    
+}
