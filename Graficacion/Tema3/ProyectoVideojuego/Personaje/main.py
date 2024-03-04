@@ -28,8 +28,23 @@ directorio_script = os.path.dirname(os.path.abspath(__file__))
 
 def draw():
     glEnable(GL_DEPTH_TEST)
+    
+    glColor3f(0.0, 1.0, 0.0) 
+    glPushMatrix()
+    glTranslatef(0, 0, 0)
+    glScalef(2, 2, 2)
+    personaje.draw_shield()
+    glPopMatrix()
+    
+    glColor3f(1.0, 0.0, 0.0) 
+    glPushMatrix()
+    glTranslatef(0, 0, 0)
+    glScalef(2, 2, 2)
+    personaje.draw_helmet()
+    glPopMatrix()   
 
-    glColor3f(0.4, 0.2, 0.0) 
+    #glColor3f(0.4, 0.2, 0.0) 
+    glColor3f(0.9176470590,0.7450,0.2470)
     glPushMatrix()
     glTranslatef(0, 0, 0)
     glScalef(2, 2, 2)
@@ -41,19 +56,19 @@ def draw():
     glPushMatrix()
     glTranslatef(0, 0, 0)
     glScalef(2, 2, 2)
-    # personaje.draw_smile
+    personaje.draw_smile()
     # personaje.draw_sad()
-    personaje.draw_mad()
+    # personaje.draw_mad()
     glPopMatrix()
 
-    # glColor3f(0.2, 0.6, 1.0) 
+    glColor3f(0.2, 0.6, 1.0) 
     # Enojado
-    glColor3f(1.0, 0.0, 0.0) 
+    # glColor3f(1.0, 0.0, 0.0) 
     glPushMatrix()
     glTranslatef(0, 0, 0)
     glScalef(2, 2, 2)
-    # personaje.draw_eyes()
-    personaje.draw_gino()
+    personaje.draw_eyes()
+    # personaje.draw_gino()
     glPopMatrix()
     
     glColor3f(1.0, 0.92, 0.92) 
@@ -79,6 +94,7 @@ move_duration = 1000
 timer = None 
 
 while True:
+    draw()
     for event in py.event.get():
         if event.type == py.QUIT:
             py.quit()
@@ -86,6 +102,8 @@ while True:
         elif event.type == py.KEYDOWN:
             if event.key == py.K_SPACE:
                 timer = py.time.get_ticks()
+            elif event.key == py.K_s:
+                personaje.draw_sad()
     
     current_time = py.time.get_ticks()
     if timer:

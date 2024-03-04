@@ -190,6 +190,11 @@ def draw_beard():
     glVertex3f(1.5, 0.0, 3.6)
     glVertex3f(1.5, 0.0, 3.5)
     glVertex3f(2.5, 0.0, 3.5)
+    
+    glVertex3f(0.0, 0.0, 6.0)
+    glVertex3f(0.0, 0.0, 5.2)
+    glVertex3f(3.5, 0.0, 5.2)
+    glVertex3f(3.5, 0.0, 6.0)
 
     glEnd()
 
@@ -351,4 +356,51 @@ def draw_gino():
     glVertex3f(3.1, 0.0, 4.8)
     glVertex3f(2.6, 0.0, 4.8)
 
+    glEnd()
+    
+
+def draw_shield():
+    
+    glBegin(GL_QUADS)
+    
+    glVertex3f(5.0,-0.5,6)
+    glVertex3f(5.0,-0.5,0.0)
+    glVertex3f(5.0,-4,0.0)      
+    glVertex3f(5.0,-4,6)        
+    
+    glEnd()
+
+def draw_helmet():
+    glBegin(GL_QUADS)
+    
+    glVertex3f(1.5, 0.0, 5.4)
+    glVertex3f(2.5, 0.0, 5.4)
+    glVertex3f(2.5, 0.0, 6.5)
+    glVertex3f(1.5, 0.0, 6.5)
+    
+    glVertex3f(1.5, -4.0, 5.4)
+    glVertex3f(2.5, -4.0, 5.4)
+    glVertex3f(2.5, -4.0, 6.5)
+    glVertex3f(1.5, -4.0, 6.5)    
+    
+    glVertex3f(2.5, 0.0, 6.5)
+    glVertex3f(1.5, 0.0, 6.5)
+    glVertex3f(1.5, -4.0, 6.5)
+    glVertex3f(2.5, -4.0, 6.5)
+    
+    glVertex3f(1.5, 0.0, 5.4)
+    glVertex3f(2.5, 0.0, 5.4)
+    glVertex3f(2.5, -4.0, 5.4)
+    glVertex3f(1.5, -4.0, 5.4)       
+
+    glVertex3f(2.5, 0.0, 6.5)
+    glVertex3f(2.5, 0.0, 5.4)
+    glVertex3f(2.5, -4.0, 5.4)
+    glVertex3f(2.5, -4.0, 6.5)
+    
+    glVertex3f(1.5, 0.0, 6.5)
+    glVertex3f(1.5, 0.0, 5.4)
+    glVertex3f(1.5, -4.0, 5.4)
+    glVertex3f(1.5, -4.0, 6.5)    
+    
     glEnd()
