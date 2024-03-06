@@ -343,6 +343,17 @@ def draw_mad():
 
     glEnd()
 
+def draw_shout():
+    glBegin(GL_QUADS)
+
+    glVertex3f(2.4, 0.0, 3.65)
+    glVertex3f(2.4, 0.0, 3.8)
+
+    glVertex3f(1.6, 0.0, 3.8)
+    glVertex3f(1.6, 0.0, 3.65)
+
+    glEnd()
+
 def draw_gino():
     glBegin(GL_QUADS)
 
