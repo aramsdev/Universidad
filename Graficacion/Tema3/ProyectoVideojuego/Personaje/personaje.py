@@ -9,37 +9,37 @@ from PIL import *
 def draw_head():
     glBegin(GL_QUADS)
     # Cara Frontal
-    glVertex3f(4.0, 0.0, 3.5)
-    glVertex3f(4.0, 0.0, 6.0)
-    glVertex3f(0.0, 0.0, 6.0)
-    glVertex3f(0.0, 0.0, 3.5)
+    glVertex3f(3.95, -0.05, 3.5)
+    glVertex3f(3.95, -0.05, 6.0)
+    glVertex3f(-0.05, -0.05, 6.0)
+    glVertex3f(-0.05, -0.05, 3.5)
 
     # Cara Trasera
-    glVertex3f(4.0, -4.0, 3.5)
-    glVertex3f(4.0, -4.0, 6.0)
-    glVertex3f(0.0, -4.0, 6.0)
-    glVertex3f(0.0, -4.0, 3.5)
+    glVertex3f(3.95, -3.95, 3.5)
+    glVertex3f(3.95, -3.95, 6.0)
+    glVertex3f(-0.05, -3.95, 6.0)
+    glVertex3f(-0.05, -3.95, 3.5)
 
     # Caras Laterales
-    glVertex3f(4.0, 0.0, 3.5)
-    glVertex3f(4.0, -4.0, 3.5)
-    glVertex3f(4.0, -4.0, 6.0)
-    glVertex3f(4.0, 0.0, 6.0)
+    glVertex3f(3.95, -0.05, 3.5)
+    glVertex3f(3.95, -3.95, 3.5)
+    glVertex3f(3.95, -3.95, 6.0)
+    glVertex3f(3.95, -0.05, 6.0)
 
-    glVertex3f(0.0, 0.0, 3.5)
-    glVertex3f(0.0, -4.0, 3.5)
-    glVertex3f(0.0, -4.0, 6.0)
-    glVertex3f(0.0, 0.0, 6.0)
+    glVertex3f(-0.05, -0.05, 3.5)
+    glVertex3f(-0.05, -3.95, 3.5)
+    glVertex3f(-0.05, -3.95, 6.0)
+    glVertex3f(-0.05, -0.05, 6.0)
 
-    glVertex3f(0.0, 0.0, 6.0)
-    glVertex3f(4.0, 0.0, 6.0)
-    glVertex3f(0.0, -4.0, 6.0)
-    glVertex3f(4.0, -4.0, 6.0)
+    glVertex3f(-0.05, -0.05, 6.0)
+    glVertex3f(3.95, -0.05, 6.0)
+    glVertex3f(-0.05, -3.95, 6.0)
+    glVertex3f(3.95, -3.95, 6.0)
 
-    glVertex3f(4.0, 0.0, 3.5)
-    glVertex3f(0.0, 0.0, 3.5)
-    glVertex3f(0.0, -4.0, 3.5)
-    glVertex3f(4.0, -4.0, 3.5)
+    glVertex3f(3.95, -0.05, 3.5)
+    glVertex3f(-0.05, -0.05, 3.5)
+    glVertex3f(-0.05, -3.95, 3.5)
+    glVertex3f(3.95, -3.95, 3.5)
 
     
     glEnd()  
