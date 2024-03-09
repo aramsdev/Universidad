@@ -81,7 +81,7 @@ def draw_body():
     
     glEnd()   
 
-def draw_rigth_leg():
+def draw_right_leg():
     glBegin(GL_QUADS)
     #Cara Frontal
     glVertex3f(0.5,-1.5,0.0)
@@ -413,5 +413,164 @@ def draw_helmet():
     glVertex3f(1.5, 0.0, 5.4)
     glVertex3f(1.5, -4.0, 5.4)
     glVertex3f(1.5, -4.0, 6.5)    
+    
+    glEnd()
+
+
+def draw_left_arm_up():
+    glBegin(GL_QUADS)
+    #Cara Frontal
+    glVertex3f(0.0,-1.5,3.5)
+    glVertex3f(0.0,-2.5,3.5)        
+    glVertex3f(0.0,-1.5,3.0)
+    glVertex3f(0.0,-2.5,3.0)       
+    
+    #Cara Trasera
+    glVertex3f(-1.0,-1.5,4.5)
+    glVertex3f(-1.0,-2.5,4.5)        
+    glVertex3f(-1.0,-1.5,4.0)
+    glVertex3f(-1.0,-2.5,4.0)       
+    
+    #Caras Laterales
+    glVertex3f(-1.0,-1.5,4.0)
+    glVertex3f(-1.0,-1.5,4.5)
+    glVertex3f(0.0,-1.5,3.0)
+    glVertex3f(0.0,-1.5,3.5)        
+    
+    glVertex3f(-1.0,-2.5,4.0)
+    glVertex3f(-1.0,-2.5,4.5)
+    glVertex3f(0.0,-2.5,3.0)
+    glVertex3f(0.0,-2.5,3.5)  
+    
+    glVertex3f(-1.0,-1.5,4.0)
+    glVertex3f(-1.0,-2.5,4.0)
+    glVertex3f(0.0,-2.5,3.0)
+    glVertex3f(0.0,-1.5,3.0)
+    
+    glVertex3f(-1.0,-1.5,4.5)
+    glVertex3f(-1.0,-2.5,4.5)
+    glVertex3f(0.0,-2.5,3.5)
+    glVertex3f(0.0,-1.5,3.5) 
+    
+    glEnd()
+
+def draw_right_arm_up():
+    glBegin(GL_QUADS)
+    #Cara Frontal
+    glVertex3f(4.0,-1.5,3.5)
+    glVertex3f(4.0,-2.5,3.5)        
+    glVertex3f(4.0,-1.5,3.0)
+    glVertex3f(4.0,-2.5,3.0)       
+    
+    #Cara Trasera
+    glVertex3f(5.0,-1.5,4.5)
+    glVertex3f(5.0,-2.5,4.5)        
+    glVertex3f(5.0,-1.5,4.0)
+    glVertex3f(5.0,-2.5,4.0)       
+    
+    #Caras Laterales
+    glVertex3f(5.0,-1.5,4.0)
+    glVertex3f(5.0,-1.5,4.5)
+    glVertex3f(4.0,-1.5,3.0)
+    glVertex3f(4.0,-1.5,3.5)        
+    
+    glVertex3f(5.0,-2.5,4.0)
+    glVertex3f(5.0,-2.5,4.5)
+    glVertex3f(4.0,-2.5,3.0)
+    glVertex3f(4.0,-2.5,3.5)  
+    
+    glVertex3f(5.0,-1.5,4.0)
+    glVertex3f(5.0,-2.5,4.0)
+    glVertex3f(4.0,-2.5,3.0)
+    glVertex3f(4.0,-1.5,3.0)
+    
+    glVertex3f(5.0,-1.5,4.5)
+    glVertex3f(5.0,-2.5,4.5)
+    glVertex3f(4.0,-2.5,3.5)
+    glVertex3f(4.0,-1.5,3.5) 
+    
+    glEnd()
+    
+def draw_shield_up():  
+    glBegin(GL_QUADS)
+    
+    glVertex3f(5.0,-0.5,8)
+    glVertex3f(5.0,-0.5,2.0)
+    glVertex3f(5.0,-4,2.0)      
+    glVertex3f(5.0,-4,8)        
+    
+    glEnd()
+
+def draw_move_right_leg():
+    glBegin(GL_QUADS)
+    #Cara Frontal
+    glVertex3f(0.5,-0.5,0.0)
+    glVertex3f(0.5,-1.5,0.0)        
+    glVertex3f(1.5,-0.5,0.0)
+    glVertex3f(1.5,-1.5,0.0)       
+    
+    #Cara Trasera
+    glVertex3f(0.5,-1.5,2.0)
+    glVertex3f(0.5,-2.5,2.0)        
+    glVertex3f(1.5,-1.5,2.0)
+    glVertex3f(1.5,-2.5,2.0)       
+    
+    #Caras Laterales
+    glVertex3f(0.5,-0.5,0.0)
+    glVertex3f(1.5,-0.5,0.0)
+    glVertex3f(1.5,-1.5,2.0)
+    glVertex3f(0.5,-1.5,2.0)  
+    
+    glVertex3f(0.5,-1.5,0.0)
+    glVertex3f(1.5,-1.5,0.0)
+    glVertex3f(1.5,-2.5,2.0)
+    glVertex3f(0.5,-2.5,2.0) 
+    
+    glVertex3f(0.5,-0.5,0.0)
+    glVertex3f(0.5,-1.5,2.0)
+    glVertex3f(0.5,-1.5,0.0)  
+    glVertex3f(0.5,-2.5,2.0)
+    
+    glVertex3f(1.5,-1.5,2.0)
+    glVertex3f(1.5,-2.5,2.0) 
+    glVertex3f(1.5,-0.5,0.0)
+    glVertex3f(1.5,-1.5,0.0) 
+    
+    glEnd()
+
+def draw_move_left_leg():
+    glBegin(GL_QUADS)
+    #Cara Frontal
+    glVertex3f(2.5,-0.5,0.0)
+    glVertex3f(2.5,-1.5,0.0)        
+    glVertex3f(3.5,-0.5,0.0)
+    glVertex3f(3.5,-1.5,0.0)       
+    
+    #Cara Trasera
+    glVertex3f(2.5,-1.5,2.0)
+    glVertex3f(2.5,-2.5,2.0)        
+    glVertex3f(3.5,-1.5,2.0)
+    glVertex3f(3.5,-2.5,2.0)       
+    
+    #Caras Laterales
+    glVertex3f(2.5,-0.5,0.0)
+    glVertex3f(3.5,-0.5,0.0)
+    glVertex3f(3.5,-1.5,2.0)
+    glVertex3f(2.5,-1.5,2.0)
+    
+    glVertex3f(2.5,-1.5,0.0)
+    glVertex3f(3.5,-1.5,0.0)
+    glVertex3f(3.5,-2.5,2.0)
+    glVertex3f(2.5,-2.5,2.0) 
+    
+    glVertex3f(3.5,-1.5,0.0)
+    glVertex3f(3.5,-2.5,2.0)       
+    glVertex3f(3.5,-1.5,2.0)
+    glVertex3f(3.5,-0.5,0.0)
+    
+    glVertex3f(2.5,-1.5,0.0)
+    glVertex3f(2.5,-2.5,2.0)       
+    glVertex3f(2.5,-1.5,2.0)
+    glVertex3f(2.5,-0.5,0.0) 
     
     glEnd()
