@@ -62,6 +62,12 @@ Obj2_width = 1
 Obj2_height = 1
 Obj2_depth = 1
 
+is_left_arm_up = False
+is_right_arm_up = False
+move_shield = False
+move_right_leg = False
+move_left_leg = False
+
 def draw_Objeto2():
     glEnable(GL_DEPTH_TEST)
     glPushMatrix()
@@ -80,7 +86,16 @@ def draw_Objeto2():
 
 def draw():
     glEnable(GL_DEPTH_TEST)
-    glEnable(GL_POLYGON_SMOOTH)
+    glColor3f(0.9176470590,0.7450,0.2470)
+    glPushMatrix()
+    glTranslatef(0, 0, 0)
+    glScalef(2, 2, 2)
+    personaje.draw_beard()
+    personaje.draw_hair()
+    glPopMatrix()
+
+def draw_shield():
+    glEnable(GL_DEPTH_TEST)
     glColor3f(0.89, 0.894, 0.8980) 
     glPushMatrix()
     glTranslatef(0, 0, 0)
@@ -88,12 +103,13 @@ def draw():
     personaje.draw_shield()
     glPopMatrix()
 
-    glColor3f(0.9176470590,0.7450,0.2470)
+def draw_shield_up():
+    glEnable(GL_DEPTH_TEST)
+    glColor3f(0.89, 0.894, 0.8980) 
     glPushMatrix()
     glTranslatef(0, 0, 0)
     glScalef(2, 2, 2)
-    personaje.draw_beard()
-    personaje.draw_hair()
+    personaje.draw_shield_up()
     glPopMatrix()
 
 def draw_helmet():
@@ -115,19 +131,91 @@ def draw_body():
     personaje.draw_body()
     glPopMatrix() 
 
-def draw_ext():
+def draw_right_arm():
+    glEnable(GL_DEPTH_TEST)
+    glColor3f(1.0, 0.92, 0.92) 
+    glPushMatrix()
+    glTranslatef(0, 0, 0)
+    glScalef(2, 2, 2)
+    personaje.draw_rigth_arm()
+    glPopMatrix()
+
+def draw_right_arm_up():
+    glEnable(GL_DEPTH_TEST)
+    glColor3f(1.0, 0.92, 0.92) 
+    glPushMatrix()
+    glTranslatef(0, 0, 0)
+    glScalef(2, 2, 2)
+    personaje.draw_right_arm_up()
+    glPopMatrix()
+
+def draw_left_arm():
+    glEnable(GL_DEPTH_TEST)
+    glColor3f(1.0, 0.92, 0.92) 
+    glPushMatrix()
+    glTranslatef(0, 0, 0)
+    glScalef(2, 2, 2)
+    personaje.draw_left_arm()
+    glPopMatrix()
+
+def draw_left_arm_up():
+    glEnable(GL_DEPTH_TEST)
+    glColor3f(1.0, 0.92, 0.92) 
+    glPushMatrix()
+    glTranslatef(0, 0, 0)
+    glScalef(2, 2, 2)
+    personaje.draw_left_arm_up()
+    glPopMatrix()
+        
+def draw_head():
     glEnable(GL_DEPTH_TEST)
     glEnable(GL_POLYGON_SMOOTH)
     glColor3f(1.0, 0.92, 0.92) 
     glPushMatrix()
     glTranslatef(0, 0, 0)
     glScalef(2, 2, 2)
-    personaje.draw_rigth_leg()
-    personaje.draw_left_leg()
     personaje.draw_head()
-    personaje.draw_rigth_arm()
-    personaje.draw_left_arm()
     glPopMatrix()
+
+def draw_left_leg():
+    glEnable(GL_DEPTH_TEST)
+    glEnable(GL_POLYGON_SMOOTH)
+    glColor3f(1.0, 0.92, 0.92) 
+    glPushMatrix()
+    glTranslatef(0, 0, 0)
+    glScalef(2, 2, 2)
+    personaje.draw_left_leg()
+    glPopMatrix()
+
+def draw_right_leg():
+    glEnable(GL_DEPTH_TEST)
+    glEnable(GL_POLYGON_SMOOTH)
+    glColor3f(1.0, 0.92, 0.92) 
+    glPushMatrix()
+    glTranslatef(0, 0, 0)
+    glScalef(2, 2, 2)
+    personaje.draw_right_leg()
+    glPopMatrix()   
+
+def draw_move_right_leg():
+    glEnable(GL_DEPTH_TEST)
+    glEnable(GL_POLYGON_SMOOTH)
+    glColor3f(1.0, 0.92, 0.92) 
+    glPushMatrix()
+    glTranslatef(0, 0, 0)
+    glScalef(2, 2, 2)
+    personaje.draw_move_right_leg()
+    glPopMatrix()    
+
+def draw_move_left_leg():
+    glEnable(GL_DEPTH_TEST)
+    glEnable(GL_POLYGON_SMOOTH)
+    glColor3f(1.0, 0.92, 0.92) 
+    glPushMatrix()
+    glTranslatef(0, 0, 0)
+    glScalef(2, 2, 2)
+    personaje.draw_move_left_leg()
+    glPopMatrix() 
 
 def draw_eyes():
     glEnable(GL_DEPTH_TEST)
@@ -215,19 +303,19 @@ while True:
             if event.key == py.K_SPACE:
                 timer = py.time.get_ticks()
             if event.key == py.K_t:
-                is_sad = True
-                is_happy = False
+                so.play("/home/aramsdev/Desktop/Universidad/Graficacion/Tema3/Sonidos/triste.mp3")
             if event.key == py.K_f:
-                is_happy = True
+               so.play("/home/aramsdev/Desktop/Universidad/Graficacion/Tema3/Sonidos/feliz.mp3")
             if event.key == py.K_e:
-                is_mad = True
-                is_happy = False
-                so.play("/home/aramsdev/Desktop/Universidad/Graficacion/Tema3/Sonidos/sparta.mp3")
+                so.play("/home/aramsdev/Desktop/Universidad/Graficacion/Tema3/Sonidos/enojado.mp3")
             if event.key == py.K_p:
-                shout = True
                 so.play("/home/aramsdev/Desktop/Universidad/Graficacion/Tema3/Sonidos/sparta.mp3")
-            if event.key == py.K_g:
-                gino = True
+            if event.key == py.K_l:
+                so.play("/home/aramsdev/Desktop/Universidad/Graficacion/Tema3/Sonidos/guino.mp3")
+            if event.key == py.K_q:
+                so.play("/home/aramsdev/Desktop/Universidad/Graficacion/Tema3/Sonidos/soundtrack.mp3")
+            if event.key == py.K_r:
+                so.stop()
             if event.key == py.K_0:
                 scene = 0
             if event.key == py.K_1:
@@ -241,7 +329,8 @@ while True:
             if event.key==py.K_i:
                 messagebox.showinfo("Información", "Nombre: Alexis Ramos Saldaña\nNúmero de control: 22280687")    
             if event.key == py.K_m:
-                messagebox.showinfo("Menu", "Escenarios\n0 Roma 1.Bosque 2.Grecia 3.Troya 4.Coliseo\nEmociones\np.Triste e.Enojado g.Guiño f.Feliz t.Grito")    
+                messagebox.showinfo("Menu", "Escenarios\n0.Roma 1.Bosque 2.Grecia 3.Troya 4.Coliseo\nEmociones\nt.Triste e.Enojado l.Guiño f.Feliz p.Grito\nMovimientos Camara: a. w. s. d. x. z.\nMovimientos: y h g j\nAcciones: v.Mover brazo b.Levantar escudo n.Mover pierna derecha c.Mover pierna izquierda\nSonido: q.On r.Off")    
+    
     keys = py.key.get_pressed()
 
     if keys[py.K_a]:
@@ -285,13 +374,17 @@ while True:
     if keys[py.K_t]:
         is_sad = True
         is_happy = False
+        
+    if keys[py.K_f]:
+        is_happy = True
 
     if keys[py.K_e]:
         is_mad = True
         is_happy = False
     
-    if keys[py.K_g]:
+    if keys[py.K_l]:
         gino = True
+        is_happy = False
 
     if keys[py.K_p]:
         shout = True
@@ -308,12 +401,33 @@ while True:
 
     if keys[py.K_j]:
         glTranslatef(1,0,0)
-        
+    
+    if keys[py.K_v]:  
+        is_left_arm_up = True
+    else:
+        is_left_arm_up = False  
+             
+    if keys[py.K_b]:  
+        move_shield = True
+        is_right_arm_up = True
+    else:
+        move_shield = False  
+        is_right_arm_up = False
+
+    if keys[py.K_n]:  
+        move_right_leg = True
+    else:
+        move_right_leg = False  
+    
+    if keys[py.K_c]:
+        move_left_leg = True
+    else:
+        move_left_leg = False
+                
     draw()
-    # il.iluminacion(1.0, 1.0, 1.0)
     draw_body()
-    draw_ext()
     draw_helmet()
+    draw_head()
     
     if is_sad:
         draw_sad()
@@ -326,21 +440,44 @@ while True:
         draw_eyes()
     elif gino:
         draw_gino()
+        draw_smile()
     elif shout:
         draw_shout()
         draw_mad_eyes()
     
-    if coli.rombo_colision(PosX_Objeto2, PosY_Objeto2, PosZ_Objeto2,
-                           Obj2_width, Obj2_height, Obj2_depth, PosX_Objeto,
-                           PosY_Objeto, PosZ_Objeto, Obj1_height):
-        txt.draw_text("Colision detectada", 8,8,4,50,150,14,0,0,0,0)
+    if is_left_arm_up:  
+        draw_left_arm_up()  
     else:
-        txt.draw_text("Graficacion", 8,8,4,50,150,14,0,0,0,0)
+        draw_left_arm()  
+    
+    if move_shield:
+        draw_right_arm_up()  
+        draw_shield_up()
+    else:
+        draw_shield()  
+        draw_right_arm() 
+    
+    if move_right_leg:
+        draw_move_right_leg()
+    else:
+        draw_right_leg()
+    
+    if move_left_leg:
+        draw_move_left_leg()
+    else:
+        draw_left_leg()
+    
+    # if coli.rombo_colision(PosX_Objeto2, PosY_Objeto2, PosZ_Objeto2,
+    #                        Obj2_width, Obj2_height, Obj2_depth, PosX_Objeto,
+    #                        PosY_Objeto, PosZ_Objeto, Obj1_height):
+    #     txt.draw_text("Colision detectada", 8,8,4,50,150,14,0,0,0,0)
+    # else:
+    #     txt.draw_text("Graficacion", 8,8,4,50,150,14,0,0,0,0)
 
-    draw_Objeto2()
+    # draw_Objeto2()
     
     glPopMatrix() 
-
+    
     if scene == 0:
         es.draw_e5("/home/aramsdev/Desktop/Universidad/Graficacion/Tema3/ProyectoVideojuego/Imagenes/roma.jpeg")   
     elif scene == 1:
