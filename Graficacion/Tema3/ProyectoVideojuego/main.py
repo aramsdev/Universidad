@@ -303,17 +303,17 @@ while True:
             if event.key == py.K_SPACE:
                 timer = py.time.get_ticks()
             if event.key == py.K_t:
-                so.play("/home/aramsdev/Desktop/Universidad/Graficacion/Tema3/Sonidos/triste.mp3")
+                so.play("C:/Users/aramsdev/Universidad/Universidad/Graficacion/Tema3/Sonidos/triste.mp3")
             if event.key == py.K_f:
-               so.play("/home/aramsdev/Desktop/Universidad/Graficacion/Tema3/Sonidos/feliz.mp3")
+                so.play("C:/Users/aramsdev/Universidad/Universidad/Graficacion/Tema3/Sonidos/feliz.mp3")
             if event.key == py.K_e:
-                so.play("/home/aramsdev/Desktop/Universidad/Graficacion/Tema3/Sonidos/enojado.mp3")
+                so.play("C:/Users/aramsdev/Universidad/Universidad/Graficacion/Tema3/Sonidos/enojado.mp3")
             if event.key == py.K_p:
-                so.play("/home/aramsdev/Desktop/Universidad/Graficacion/Tema3/Sonidos/sparta.mp3")
+                so.play("C:/Users/aramsdev/Universidad/Universidad/Graficacion/Tema3/Sonidos/sparta.mp3")
             if event.key == py.K_l:
-                so.play("/home/aramsdev/Desktop/Universidad/Graficacion/Tema3/Sonidos/guino.mp3")
+                so.play("C:/Users/aramsdev/Universidad/Universidad/Graficacion/Tema3/Sonidos/guino.mp3")
             if event.key == py.K_q:
-                so.play("/home/aramsdev/Desktop/Universidad/Graficacion/Tema3/Sonidos/soundtrack.mp3")
+                so.play("C:/Users/aramsdev/Universidad/Universidad/Graficacion/Tema3/Sonidos/soundtrack.mp3")
             if event.key == py.K_r:
                 so.stop()
             if event.key == py.K_0:
@@ -479,15 +479,15 @@ while True:
     glPopMatrix() 
     
     if scene == 0:
-        es.draw_e5("/home/aramsdev/Desktop/Universidad/Graficacion/Tema3/ProyectoVideojuego/Imagenes/roma.jpeg")   
+        es.draw_e5("C:/Users/aramsdev/Universidad/Universidad/Graficacion/Tema3/ProyectoVideojuego/Imagenes/roma.jpeg")   
     elif scene == 1:
-        es.draw_e5("/home/aramsdev/Desktop/Universidad/Graficacion/Tema3/ProyectoVideojuego/Imagenes/bosque.webp") 
+        es.draw_e5("C:/Users/aramsdev/Universidad/Universidad/Graficacion/Tema3/ProyectoVideojuego/Imagenes/bosque.webp") 
     if scene == 2:
-        es.draw_e5("/home/aramsdev/Desktop/Universidad/Graficacion/Tema3/ProyectoVideojuego/Imagenes/grecia.jpeg")   
+        es.draw_e5("C:/Users/aramsdev/Universidad/Universidad/Graficacion/Tema3/ProyectoVideojuego/Imagenes/grecia.jpeg")   
     elif scene == 3:
-        es.draw_e5("/home/aramsdev/Desktop/Universidad/Graficacion/Tema3/ProyectoVideojuego/Imagenes/troya.jpg")  
+        es.draw_e5("C:/Users/aramsdev/Universidad/Universidad/Graficacion/Tema3/ProyectoVideojuego/Imagenes/troya.jpg")  
     if scene == 0:
-        es.draw_e5("/home/aramsdev/Desktop/Universidad/Graficacion/Tema3/ProyectoVideojuego/Imagenes/coliseo.jpg") 
+        es.draw_e5("C:/Users/aramsdev/Universidad/Universidad/Graficacion/Tema3/ProyectoVideojuego/Imagenes/coliseo.jpg") 
 
     py.display.flip()
     py.time.wait(100)
